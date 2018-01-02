@@ -5,8 +5,6 @@
 
 use app\widgets\Alert;
 use yii\helpers\Html;
-use yii\bootstrap\Nav;
-use yii\bootstrap\NavBar;
 use yii\widgets\Breadcrumbs;
 use app\assets\AppAsset;
 
@@ -28,44 +26,9 @@ AppAsset::register($this);
 <?php $this->beginBody() ?>
 
 <div class="wrapds">
-    <?php
-    NavBar::begin([
-        'brandLabel' => Yii::$app->name,
-        'brandUrl' => Yii::$app->homeUrl,
-        'options' => [
-            'class' => 'navbar navbar-expand-md navbar-light bg-light rounded mb-3',
-        ],
-    ]);
-    echo Nav::widget([
-        'options' => ['class' => 'navbar-nav text-md-center nav-justified w-100'],
-        'items' => [
-            ['label' => 'Home', 'url' => ['/site/index'], 'options' => ['class' => 'nav-item']],
-            ['label' => 'About', 'url' => ['/site/about'], 'options' => ['class' => 'nav-item']],
-            ['label' => 'Contact', 'url' => ['/site/contact'], 'options' => ['class' => 'nav-item']],
-            Yii::$app->user->isGuest ? (
-                ['label' => 'Login', 'url' => ['/site/login']]
-            ) : (
-                '<li>'
-                . Html::beginForm(['/site/logout'], 'post')
-                . Html::submitButton(
-                    'Logout (' . Yii::$app->user->identity->username . ')',
-                    ['class' => 'btn btn-link logout']
-                )
-                . Html::endForm()
-                . '</li>'
-            )
-        ],
-    ]);
-    NavBar::end();
-    ?>
 
-    <div class="container">
-        <?= Breadcrumbs::widget([
-            'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
-        ]) ?>
-        <?= Alert::widget() ?>
-        <?= $content ?>
-    </div>
+    <?= require_once "_header.php" ?>
+
 </div>
 
 <footer class="footer">
