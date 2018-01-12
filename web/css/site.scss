@@ -8,13 +8,16 @@ header {
   }
   .telephone {
     font-size: 14px;
-    font-weight: 400;
     display: inline-block;
      a {
+       color: black;
        alignment: center;
+       font-weight: 500;
        padding-left: 10px;
-
      }
+    a:hover {
+      text-decoration: none;
+    }
   }
 
   .logo {
@@ -27,6 +30,10 @@ header {
 
   .navigation {
     min-height: 120px;
+    background-color: #3c3c3c;
+  }
+  .navbar-inverse {
+    border: none;
   }
 
   .navbar {
@@ -51,6 +58,68 @@ header {
   .navbar-toggle {
     float: right;
   }
+
+}
+
+@media screen and (min-width: 960px) {
+  .navbar-toggle {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 960px){
+  header {
+    .navbar-toggle {
+      display: block;
+      position: absolute;
+      right: 40px;
+      height: 60px;
+      width: 45px;
+      margin-top: 0;
+      top: 30px;
+    }
+    .nav {
+      padding-left: 0;
+      margin-bottom: 0;
+      list-style: none;
+      padding-top: 120px;
+      border: none;
+
+    }
+    .navbar-collapse {
+      border: none;
+      -webkit-box-shadow: none;
+      box-shadow: none;
+    }
+  }
+
+}
+
+@media screen and (max-width: 768px){
+  header {
+    .navbar-toggle {
+      position: absolute;
+      right: 40px;
+      height: 60px;
+      width: 45px;
+      margin-top: 0;
+      top: 30px;
+    }
+    .nav {
+      padding-left: 0;
+      margin-bottom: 0;
+      list-style: none;
+      padding-top: 120px;
+      border: none;
+
+    }
+    .navbar-collapse {
+      border: none;
+      -webkit-box-shadow: none;
+      box-shadow: none;
+    }
+  }
+
 }
 
 
@@ -62,3 +131,70 @@ header {
   background-color: #2aabd2;
   width: 100%;
 }
+
+// footer start
+footer {
+  .container {
+    padding: 0;
+    background-color: #3c3c3c;
+    min-height: 120px;
+    .contact {
+
+      padding-top: 25px;
+      display: block;
+      font-size: 16px;
+      font-weight: 600;
+      .wrapper-contact {
+        border-right: 1px solid #fff;
+        a {
+          display: ruby-text;
+          margin-bottom: 10px;
+          padding-left: 30px;
+          color: #fff;
+        }
+        a:hover {
+          text-decoration: none;
+        }
+      }
+    }
+
+    .form-subscribers {
+      width: 100%;
+      padding-left: 30px;
+      padding-top: 25px;
+      display: block;
+      font-size: 12px;
+      color: #fff;
+      font-weight: 600;
+        p { margin-bottom: 23px}
+        input {
+          height: 30px;
+          width: 200px;
+          color: black;
+        }
+        button {
+          height: 30px;
+          color: #fff;
+          margin-left: 10px;
+          border-radius: 5px;
+          border: 1px solid #fff;
+          background-color: #3c3c3c;
+        }
+
+    }
+  }
+}
+
+@media screen and (max-width: 1024px){
+  footer {
+    .container {
+      .contact {
+        .wrapper-contact {
+          border: none;
+        }
+      }
+    }
+  }
+
+}
+// footer end

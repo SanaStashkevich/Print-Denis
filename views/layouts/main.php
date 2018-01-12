@@ -29,17 +29,11 @@ AppAsset::register($this);
 <div class="wrapds">
 
     <? include_once "_header.php" ?>
+    <?= $content ?>
 
-    <? include_once "_o-nas.php" ?>
 </div>
 
-<footer class="footer">
-    <div class="container">
-        <p class="pull-left">&copy; My Company <?= date('Y') ?></p>
-
-        <p class="pull-right"><?= Yii::powered() ?></p>
-    </div>
-</footer>
+    <? include_once "_footer.php" ?>
 
 <?php $this->endBody() ?>
 </body>
