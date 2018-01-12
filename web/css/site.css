@@ -14,12 +14,12 @@ header .logo {
   top: 0;
   max-height: 115px; }
 header .navigation {
-  min-height: 75px; }
+  min-height: 120px; }
 header .navbar {
   margin-bottom: 0; }
 header .nav {
   float: right;
-  font-size: 24px;
+  font-size: 16px;
   font-weight: 600;
   color: #fff !important; }
   header .nav li a {

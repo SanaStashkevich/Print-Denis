@@ -1,5 +1,7 @@
-// header start
 
+
+
+// header start
 header {
   .container {
     padding: 0;
@@ -24,7 +26,7 @@ header {
   }
 
   .navigation {
-    min-height: 75px;
+    min-height: 120px;
   }
 
   .navbar {
@@ -32,7 +34,7 @@ header {
   }
   .nav {
     float: right;
-    font-size: 24px;
+    font-size: 16px;
     font-weight: 600;
     color: #fff !important;
     li {
