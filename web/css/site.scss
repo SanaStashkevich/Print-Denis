@@ -14,42 +14,44 @@ header {
 
      }
   }
-}
 
-.logo {
-  float: left;
-  position: absolute;
-  left: 0;
-  top: 0;
-  max-height:115px;
-}
-
-.navigation {
-  min-height: 75px;
-}
-
-.navbar {
-  margin-bottom: 0;
-}
-.nav {
-  float: right;
-  font-size: 24px;
-  font-weight: 600;
-  color: #fff !important;
-  li {
-    a {
-      color: #fff;
-    }
-    a:hover {
-      border-radius: 5px;
-      background-color: deepskyblue;
-    }
+  .logo {
+    float: left;
+    position: absolute;
+    left: 0;
+    top: 0;
+    max-height:115px;
   }
 
+  .navigation {
+    min-height: 75px;
+  }
+
+  .navbar {
+    margin-bottom: 0;
+  }
+  .nav {
+    float: right;
+    font-size: 24px;
+    font-weight: 600;
+    color: #fff !important;
+    li {
+      a {
+        color: #fff;
+      }
+      a:hover {
+        border-radius: 5px;
+        background-color: deepskyblue;
+      }
+    }
+
+  }
+  .navbar-toggle {
+    float: right;
+  }
 }
-.navbar-toggle {
-  float: right;
-}
+
+
 
 // header end
 
