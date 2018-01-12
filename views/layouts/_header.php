@@ -2,28 +2,39 @@
 
 use yii\bootstrap\Nav;
 use yii\bootstrap\NavBar;
+use yii\helpers\Html;
 
 ?>
 
-<header class="masthead">
-    <h3 class="text-muted">Project name</h3>
+<header>
+    <div class="container nav-container">
+        <div class="col-md-8 col-md-offset-2 text-center" ><div class="telephone">
+                <a href="tel:+380508016609"><span class="glyphicon glyphicon-earphone"></span> +38 (050) 801 66 09</a>
+                <a href="tel:+380953319441"><span class="glyphicon glyphicon-earphone"></span> +38 (095) 331 94 41</a>
+            </div></div>
+
+        <div class="clearfix"></div>
+    <?php
+
+    NavBar::begin([
+        'brandLabel' => Html::img('@web/images/site/logo.png', ['class' =>'logo'] ),
+
+        'options' => [
+            'class' => 'navbar navbar-inverse navbar-fixed-top navigation',
+        ],
+    ]); ?>
 
     <?php
-    NavBar::begin([
-        'options' => [
-            'class' => 'navbar navbar-expand-md navbar-light bg-light rounded mb-3',
-        ],
-    ]);
     echo Nav::widget([
-        'options' => ['class' => 'navbar-nav text-md-center nav-justified w-100'],
         'items' => [
-            ['label' => 'Home', 'url' => ['/site/index'], 'options' => ['class' => 'nav-item']],
-            ['label' => 'About', 'url' => ['/site/about'], 'options' => ['class' => 'nav-item']],
-            ['label' => 'Contact', 'url' => ['/site/contact'], 'options' => ['class' => 'nav-item']],
+            ['label' => 'Home', 'url' => ['#top']],
+            ['label' => 'About', 'url' => ['#o-nas']],
+            ['label' => 'Contact', 'url' => ['#contacts']],
             ],
+
     ]);
     NavBar::end();
     ?>
-
+    </div>
 
 </header>

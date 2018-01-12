@@ -1,0 +1,60 @@
+// header start
+
+header {
+  .container {
+    padding: 0;
+  }
+  .telephone {
+    font-size: 14px;
+    font-weight: 400;
+    display: inline-block;
+     a {
+       alignment: center;
+       padding-left: 10px;
+
+     }
+  }
+}
+
+.logo {
+  float: left;
+  position: absolute;
+  left: 0;
+  top: 0;
+  max-height:115px;
+}
+
+.navigation {
+  min-height: 75px;
+}
+
+.navbar {
+  margin-bottom: 0;
+}
+.nav {
+  float: right;
+  font-size: 24px;
+  font-weight: 600;
+  color: #fff !important;
+  li {
+    a {
+      color: #fff;
+    }
+    a:hover {
+      border-radius: 5px;
+      background-color: deepskyblue;
+    }
+  }
+
+}
+.navbar-toggle {
+  float: right;
+}
+
+// header end
+
+#o-nas {
+  height: 700px;
+  background-color: #2aabd2;
+  width: 100%;
+}

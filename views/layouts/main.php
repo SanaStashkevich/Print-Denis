@@ -27,8 +27,9 @@ AppAsset::register($this);
 
 <div class="wrapds">
 
-    <?= require_once "_header.php" ?>
+    <? include_once "_header.php" ?>
 
+    <? include_once "_o-nas.php" ?>
 </div>
 
 <footer class="footer">
