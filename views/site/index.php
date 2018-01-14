@@ -7,5 +7,6 @@ $this->title = 'My Yii Application';
 <div class="site-index">
 
     <? include_once "_o-nas.php" ?>
+    <? include_once "_products.php" ?>
 
 </div>

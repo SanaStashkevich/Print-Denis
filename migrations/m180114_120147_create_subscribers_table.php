@@ -15,7 +15,7 @@ class m180114_120147_create_subscribers_table extends Migration
         $this->createTable('subscribers', [
             'id' => $this->primaryKey(),
             'email' => $this->string(160)->notNull()->unique(),
-            'status' => $this->smallInteger(1)->check('status in (1,2)')->notNull(),
+            'status' => $this->integer(1)->notNull()->defaultValue(0),
             'hash'  => $this->string(250)->notNull()->unique(),
         ]);
     }

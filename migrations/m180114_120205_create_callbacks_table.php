@@ -16,7 +16,7 @@ class m180114_120205_create_callbacks_table extends Migration
             'id' => $this->primaryKey(),
             'name' => $this->string(160)->notNull(),
             'phone' => $this->string(32)->notNull(),
-            'status' => $this->smallInteger(1)->check('status in (1,2)')->notNull(),
+            'status' => $this->integer(1)->notNull()->defaultValue(0),
         ]);
     }
 

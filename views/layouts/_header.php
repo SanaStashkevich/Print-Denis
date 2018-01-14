@@ -29,11 +29,11 @@ use yii\helpers\Html;
     <?php
     echo Nav::widget([
         'items' => [
-            ['label' => 'О нас', 'url' => ['#o-nas']],
-            ['label' => 'Продукция', 'url' => ['#produts']],
-            ['label' => 'Требования к макетам', 'url' => ['#need']],
-            ['label' => 'Оплата и доставка', 'url' => ['#delivery']],
-            ['label' => 'Контакты', 'url' => ['#contacts']],
+            ['label' => 'Про нас', 'url' => ['#o-nas']],
+            ['label' => 'Продукція', 'url' => ['#products']],
+            ['label' => 'Вимоги до макетів', 'url' => ['#need']],
+            ['label' => 'Оплата і доставка', 'url' => ['#delivery']],
+            ['label' => 'Контакти', 'url' => ['#contacts']],
             ],
         'options' => ['class' => 'nav'],
     ]);

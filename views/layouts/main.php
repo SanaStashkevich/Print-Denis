@@ -20,6 +20,7 @@ AppAsset::register($this);
     <?= Html::csrfMetaTags() ?>
     <title><?= Html::encode($this->title) ?></title>
     <?php $this->head() ?>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <link rel="stylesheet" href="/web/images/font-awesome-4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
 </head>
@@ -37,5 +38,20 @@ AppAsset::register($this);
 
 <?php $this->endBody() ?>
 </body>
+<script>
+    $(document).ready(function(){
+        console.dir('dsf');
+        $('.nav li a[href*="/#"]').on("click", function(e){
+            var anchor = $(this).attr('href').substr(1);
+            //console.dir(anchor);
+           // alert('sad');
+            $('html, body').stop().animate({
+                scrollTop: $(anchor).offset().top
+            }, 777);
+            e.preventDefault();
+            return false;
+        });
+    });
+</script>
 </html>
 <?php $this->endPage() ?>

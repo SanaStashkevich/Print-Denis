@@ -127,10 +127,47 @@ header {
 // header end
 
 #o-nas {
-  height: 700px;
+  padding-top: 50px;
+  padding-bottop: 50px;
   background-color: #2aabd2;
   width: 100%;
+  .wrapper-text {
+    font-size: 16px;
+    font-weight: 500;
+    .text-descript {
+      text-indent: 30px;
+    }
+    img {
+      height: 180px
+    }
+    .img-manager-1 {
+      float: left;
+      padding-right: 20px;
+      padding-bottom: 10px;
+    }
+    .img-manager-2 {
+      float: right;
+      padding-left: 20px;
+      padding-bottom: 10px;
+    }
+    .img-manager-1,
+    .img-manager-2 {
+      .caption {
+        padding-top: 5px;
+        font-style: italic;
+        font-size: 12px;
+        max-width: 180px;
+      }
+    }
+  }
 }
+
+// products start
+#products {
+  height: 650px;
+  background-color: #2b542c;
+}
+// products end
 
 // footer start
 footer {
