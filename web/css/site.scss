@@ -1,6 +1,12 @@
 body {
   font-size: 14px;
 }
+.title {
+  text-transform: uppercase;
+  width: 100%;
+  text-align: center;
+  padding-bottom: 20px;
+}
 // header start
 header {
   .container {
@@ -51,6 +57,10 @@ header {
       a:hover {
         border-radius: 5px;
         background-color: deepskyblue;
+      }
+
+      a:focus {
+        background-color: transparent;
       }
     }
 
@@ -128,7 +138,6 @@ header {
 
 #o-nas {
   background-color: #2aabd2;
-  width: 100%;
   .row {
     margin: 50px 0;
 
@@ -137,6 +146,9 @@ header {
       font-weight: 500;
       .text-descript {
         text-indent: 30px;
+        strong{
+          font-size: 18px;
+        }
       }
       img {
         height: 180px
@@ -161,6 +173,7 @@ header {
           border-radius: 5px;
           padding: 3px;
           background-color: #9d9d9d;
+          display: table;
         }
       }
     }
@@ -177,17 +190,9 @@ header {
 // requirements for models start
 #need{
   background-color: #cecece;
-  width: 100%;
-  font-size: 14px;
+  font-size: 16px;
   .row {
     margin: 50px 0;
-
-    .title {
-      text-transform: uppercase;
-      width: 100%;
-      text-align: center;
-      padding-bottom: 20px;
-    }
 
     .terms {
       h3 {
@@ -219,7 +224,7 @@ header {
 
     }
     .file-with-requirements {
-      font-size: 12px;
+      font-size: 14px;
       font-weight: bold;
       .download-file {
         color: #8B0000;
@@ -229,6 +234,39 @@ header {
 }
 
 // requirements for models end
+
+// delivery and payments start
+#delivery{
+  background-color: #9d9d9d;
+  .row{
+      margin: 50px 0;
+      font-size: 14px;
+
+    .img-payment,
+    .img-delivery {
+      height: 60px;
+    }
+
+    .delivery,
+    .payment{
+      ul {
+        padding: 0;
+        list-style-type: none;
+      }
+      .img-nal,
+      .img-beznal,
+      .img-taxi,
+      .img-novap,
+      .img-intime,
+      .img-ukrposta {
+        height: 50px;
+        border-radius: 5px;
+        vertical-align: baseline;
+      }
+    }
+  }
+}
+// delivery and payments end
 
 // footer start
 footer {

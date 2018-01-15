@@ -9,5 +9,6 @@ $this->title = 'My Yii Application';
     <? include_once "_o-nas.php" ?>
     <? include_once "_products.php" ?>
     <? include_once "_requirements_for_model.php" ?>
+    <? include_once "_delivery_and_payment.php" ?>
 
 </div>

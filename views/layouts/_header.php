@@ -32,7 +32,7 @@ use yii\helpers\Html;
             ['label' => 'Про нас', 'url' => ['#o-nas']],
             ['label' => 'Продукція', 'url' => ['#products']],
             ['label' => 'Вимоги до макетів', 'url' => ['#need']],
-            ['label' => 'Оплата і доставка', 'url' => ['#delivery']],
+            ['label' => 'Оплата та доставка', 'url' => ['#delivery']],
             ['label' => 'Контакти', 'url' => ['#contacts']],
             ],
         'options' => ['class' => 'nav'],
