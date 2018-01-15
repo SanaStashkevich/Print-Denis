@@ -40,14 +40,11 @@ AppAsset::register($this);
 </body>
 <script>
     $(document).ready(function(){
-        console.dir('dsf');
         $('.nav li a[href*="/#"]').on("click", function(e){
             var anchor = $(this).attr('href').substr(1);
-            //console.dir(anchor);
-           // alert('sad');
             $('html, body').stop().animate({
                 scrollTop: $(anchor).offset().top
-            }, 777);
+            }, 500);
             e.preventDefault();
             return false;
         });
