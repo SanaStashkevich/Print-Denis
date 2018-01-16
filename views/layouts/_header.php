@@ -16,29 +16,30 @@ use yii\helpers\Html;
             </div></div>
 
         <div class="clearfix"></div>
-    <?php
+        <?php
 
-    NavBar::begin([
-        'brandLabel' => Html::img('@web/images/site/logo.png', ['class' =>'logo'] ),
+        NavBar::begin([
+            'brandLabel' => Html::img('@web/images/site/logo.png', ['class' =>'logo'] ),
 
-        'options' => [
-            'class' => 'navbar navbar-inverse navbar-fixed-top navigation',
-        ],
-    ]); ?>
-
-    <?php
-    echo Nav::widget([
-        'items' => [
-            ['label' => 'Про нас', 'url' => ['#o-nas']],
-            ['label' => 'Продукція', 'url' => ['#products']],
-            ['label' => 'Вимоги до макетів', 'url' => ['#need']],
-            ['label' => 'Оплата і доставка', 'url' => ['#delivery']],
-            ['label' => 'Контакти', 'url' => ['#contacts']],
+            'options' => [
+                'class' => 'navbar navbar-inverse navbar-fixed-top navigation',
             ],
-        'options' => ['class' => 'nav'],
-    ]);
-    NavBar::end();
-    ?>
+        ]); ?>
+
+        <?php
+        echo Nav::widget([
+            'items' => [
+                ['label' => 'Про нас', 'url' => ['#o-nas']],
+                ['label' => 'Продукція', 'url' => ['#products']],
+                ['label' => 'Вимоги до макетів', 'url' => ['#need']],
+                ['label' => 'Оплата і доставка', 'url' => ['#delivery']],
+                ['label' => 'Контакти', 'url' => ['#contacts']],
+                ],
+            'options' => ['class' => 'nav'],
+        ]);
+        NavBar::end();
+        ?>
+        <?= Html::button("Заказать звонок",['class' => 'btn callback']); ?>
     </div>
 
 </header>
