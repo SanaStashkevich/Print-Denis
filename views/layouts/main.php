@@ -41,17 +41,5 @@ AppAsset::register($this);
 </script>
 <?php $this->endBody() ?>
 </body>
-<script>
-    $(document).ready(function(){
-        $('.nav li a[href*="/#"]').on("click", function(e){
-            var anchor = $(this).attr('href').substr(1);
-            $('html, body').stop().animate({
-                scrollTop: $(anchor).offset().top
-            }, 500);
-            e.preventDefault();
-            return false;
-        });
-    });
-</script>
 </html>
 <?php $this->endPage() ?>

@@ -27,21 +27,5 @@
     </div>
     <noindex>
         <a style="" title="Наверх" id="toTop"></a>
-        <script type="text/javascript">
-            $(window).scroll(function () {
-                if ($(this).scrollTop() > 10) {
-                    $('#toTop').fadeIn(400);
-                }
-                else {
-                    $('#toTop').fadeOut(300);
-                }
-            });
-            $('#toTop').click(function () {
-                $('body,html').animate({
-                    scrollTop: 0
-                }, 500);
-                return false;
-            });
-        </script>
     </noindex>
 </footer>
