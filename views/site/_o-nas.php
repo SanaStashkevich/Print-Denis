@@ -6,7 +6,7 @@ use yii\helpers\Html;
 <div id="o-nas" class="container">
     <div class="row">
         <div class="wrapper-text">
-
+            <h2 class="title"><strong>Про нас</strong></h2>
 
             <p class="text-descript">
                 <strong>«Друкарня Добрий День»</strong> -  ми вже не молода, рекламно-виробнича компанія, яка постійно розвивається. Наявність власного парку сучасного обладнання, дозволяє швидко і якісно виконувати замовлення за хорошими цінами.

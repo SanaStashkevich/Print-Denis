@@ -137,7 +137,7 @@ header {
 // header end
 
 #o-nas {
-  background-color: #2aabd2;
+  background-color: #b6b3b3;
   .row {
     margin: 50px 0;
 
@@ -247,7 +247,6 @@ header {
       height: 60px;
       vertical-align: baseline;
     }
-
     .delivery,
     .payment{
       ul {
@@ -269,6 +268,46 @@ header {
 }
 // delivery and payments end
 
+// contacts start
+#contacts{
+  background-color: #dfdfdf;
+  font-size: 16px;
+  .row {
+    margin: 50px 0;
+    #map {
+      height: 400px;
+      display: block;
+    }
+    .wrapper-map{
+      .row {
+        margin: 0;
+      }
+    }
+
+    .schedule,
+    .contact,
+    .phones-emails {
+      p>span {
+        font-size: 16px;
+        font-weight: 600;
+
+      }
+      a{
+        text-decoration: none;
+        color: #0f0f0f;
+      }
+      .detail {
+        font-size: 12px;
+      }
+      .red {
+        color: darkred;
+      }
+    }
+
+  }
+}
+// contacts end
+
 // footer start
 footer {
   .container {
@@ -282,7 +321,7 @@ footer {
       font-size: 16px;
       font-weight: 600;
       .wrapper-contact {
-        border-right: 1px solid #fff;
+        //border-right: 1px solid #fff;
         a {
           display: ruby-text;
           margin-bottom: 10px;
@@ -303,7 +342,7 @@ footer {
       font-size: 12px;
       color: #fff;
       font-weight: 600;
-        p { margin-bottom: 23px}
+        p { margin-bottom: 10px}
         input {
           height: 30px;
           width: 200px;
@@ -315,7 +354,7 @@ footer {
           margin-left: 10px;
           border-radius: 5px;
           border: 1px solid #fff;
-          background-color: #3c3c3c;
+          background-color: #2aabd2;
         }
 
     }

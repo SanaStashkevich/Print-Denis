@@ -36,6 +36,9 @@ AppAsset::register($this);
 
     <? include_once "_footer.php" ?>
 
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAR8v_DU-8-2oWgwvCnJVxUXDkRAMxGJ9g&callback=initMap">
+</script>
 <?php $this->endBody() ?>
 </body>
 <script>
