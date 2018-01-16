@@ -3,10 +3,10 @@
 /* @var $this \yii\web\View */
 /* @var $content string */
 
-use app\widgets\Alert;
+
 use yii\helpers\Html;
-use yii\widgets\Breadcrumbs;
 use app\assets\AppAsset;
+
 
 AppAsset::register($this);
 ?>
@@ -31,7 +31,6 @@ AppAsset::register($this);
 
     <? include_once "_header.php" ?>
     <?= $content ?>
-
 </div>
 
     <? include_once "_footer.php" ?>

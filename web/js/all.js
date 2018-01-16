@@ -24,5 +24,22 @@ $(document).ready(function(){
         return false;
     });
 
+    $('.send-callback').on('click', function () {
+        console.dir($("#callback-form-id").serialize());
+        $.ajax({
+            type: 'POST',
+            url: '?r=site/ins_callback',
+            dataType: 'json',
+            data: $("#callback-form-id").serialize(),
+            success:function(json) {
+                alert(json);
+            },
+            error: function (json) {
+                console.dir(json);
+            }
+        })
+    });
+
+
 });
 

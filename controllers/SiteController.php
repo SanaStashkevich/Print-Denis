@@ -2,6 +2,8 @@
 
 namespace app\controllers;
 
+use app\models\Callbacks;
+use app\models\Subscribers;
 use Yii;
 use yii\filters\AccessControl;
 use yii\web\Controller;
@@ -12,6 +14,8 @@ use app\models\ContactForm;
 
 class SiteController extends Controller
 {
+
+    public $form_callback;
     /**
      * @inheritdoc
      */
@@ -61,7 +65,52 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        return $this->render('index');
+        $form_subscr = new Subscribers();
+        $form_callback = new Callbacks();
+        Yii::$app->view->params['form_callback'] = $form_callback ;
+        return $this->render('index', [
+            'form_subs' => $form_subscr,
+            //'form_callback' => $form_callback,
+        ]);
+    }
+
+    public function actionInsCallback()
+    {
+
+        if (Yii::$app->request->isAjax) {
+            return json_encode(['status' => 'Pапрос принят']);
+        }
+        $model = new Callbacks();
+        if($model->load(Yii::$app->request->post()) && $model->validate()) {
+            return json_encode([
+                'status' => 'ok'
+            ]);
+        } else {
+            return json_encode([
+                'status' => 'error'
+            ]);
+        }
+
+    }
+    public function actionInsSubscribers()
+    {
+        $model = new Subscribers();
+        if ($model->load(Yii::$app->request->post()) && $model->validate()){
+            $exist = Subscribers::findOne(['email' => Yii::$app->request->post('email')]);
+            if (!empty($exist)) {
+                return json_encode([
+                    'status' => 'ok'
+                ]);
+            } else {
+                return json_encode([
+                    'status' => 'email_exist'
+                ]);
+            }
+        } else {
+            return json_encode([
+                'status' => 'error'
+            ]);
+        }
     }
 
     /**

@@ -39,7 +39,7 @@ use yii\helpers\Html;
         ]);
         NavBar::end();
         ?>
-        <?= Html::button("Заказать звонок",['class' => 'btn callback']); ?>
+        <? include_once "_modal_form.php" ?>
     </div>
 
 </header>

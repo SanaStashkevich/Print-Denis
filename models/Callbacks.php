@@ -28,8 +28,9 @@ class Callbacks extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['name', 'phone'], 'required'],
-            [['status'], 'integer'],
+            [['name'], 'required', 'message'=> 'Имя должно быть задано'],
+            [['phone'], 'required', 'message'=> 'Телефон должен быть задан' ],
+            [['status'], 'integer', 'min'=>0, 'max'=>1],
             [['name'], 'string', 'max' => 160],
             [['phone'], 'string', 'max' => 32],
         ];
@@ -42,9 +43,9 @@ class Callbacks extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'name' => 'Name',
-            'phone' => 'Phone',
-            'status' => 'Status',
+            'name' => 'Имя',
+            'phone' => 'Телефон',
+            'status' => 'Статус',
         ];
     }
 }
