@@ -28,12 +28,13 @@ class Subscribers extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['email', 'hash'], 'required'],
+            [['email'], 'required'],
             [['status'], 'integer'],
             [['email'], 'string', 'max' => 160],
             [['hash'], 'string', 'max' => 250],
             [['email'], 'unique'],
             [['hash'], 'unique'],
+            [['status'], 'default', 'value' => 1],
         ];
     }
 
@@ -48,5 +49,17 @@ class Subscribers extends \yii\db\ActiveRecord
             'status' => 'Status',
             'hash' => 'Hash',
         ];
+    }
+
+    public function beforeSave($insert)
+    {
+        if (parent::beforeSave($insert) ) {
+
+            $this->hash = Yii::$app->security->generateRandomString(250);
+
+            return true;
+        };
+
+        return false;
     }
 }

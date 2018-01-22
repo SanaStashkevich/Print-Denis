@@ -68,8 +68,9 @@ class SiteController extends Controller
         $form_subscr = new Subscribers();
         $form_callback = new Callbacks();
         Yii::$app->view->params['form_callback'] = $form_callback ;
+        Yii::$app->view->params['form_subs'] = $form_subscr ;
         return $this->render('index', [
-            'form_subs' => $form_subscr,
+            //'form_subs' => $form_subscr,
             //'form_callback' => $form_callback,
         ]);
     }
@@ -78,39 +79,38 @@ class SiteController extends Controller
     {
 
         if (Yii::$app->request->isAjax) {
-            return json_encode(['status' => 'Pапрос принят']);
-        }
-        $model = new Callbacks();
-        if($model->load(Yii::$app->request->post()) && $model->validate()) {
-            return json_encode([
-                'status' => 'ok'
-            ]);
-        } else {
-            return json_encode([
-                'status' => 'error'
-            ]);
-        }
 
-    }
-    public function actionInsSubscribers()
-    {
-        $model = new Subscribers();
-        if ($model->load(Yii::$app->request->post()) && $model->validate()){
-            $exist = Subscribers::findOne(['email' => Yii::$app->request->post('email')]);
-            if (!empty($exist)) {
+            $model = new Callbacks();
+            if ($model->load(Yii::$app->request->post()) && $model->validate()) {
+
                 return json_encode([
-                    'status' => 'ok'
+                    'status' => $model->save() ? 'ok' : 'no',
                 ]);
             } else {
                 return json_encode([
-                    'status' => 'email_exist'
+                    'status' => 'error'
                 ]);
             }
-        } else {
-            return json_encode([
-                'status' => 'error'
-            ]);
         }
+    }
+
+    public function actionInsSubscribers()
+    {
+         if ( Yii::$app->request->isAjax) {
+             $model = new Subscribers();
+             if ($model->load(Yii::$app->request->post()) && $model->validate()) {
+
+                     return json_encode([
+                         'status' => $model->save() ? 'ok' : 'no',
+                     ]);
+
+             } else {
+    //             $model->errors;
+                 return json_encode([
+                     'status' => $model->errors,
+                 ]);
+             }
+         }
     }
 
     /**

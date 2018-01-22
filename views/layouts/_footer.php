@@ -1,3 +1,10 @@
+<?php
+use yii\widgets\ActiveForm;
+use yii\helpers\Html;
+
+$model = $this->params['form_subs'];
+?>
+
 <footer class="footer">
     <div class="container">
         <div class="col-md-6 contact">
@@ -20,8 +27,15 @@
         </div>
         <div class="col-md-6 form-subscribers">
             <p>Подпишитесь на рассылку новых прайсов</p>
-            <input type="text">
-            <button type="button">Подписаться</button>
+            <?php $form = ActiveForm::begin(['id'=> 'subscribe-form-id']); ?>
+
+            <?= $form->field($model,'email')->label('')->textInput(['autofocus'=> true,'placeholder' => 'Ваш Email']); ?>
+
+            <div class="form-group">
+                <?= Html::button('Подписаться', ['class' => 'btn btn-primary sign-describe']); ?>
+
+            </div>
+            <?php ActiveForm::end(); ?>
         </div>
 
     </div>

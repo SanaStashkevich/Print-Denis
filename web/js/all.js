@@ -25,11 +25,10 @@ $(document).ready(function(){
     });
 
     $('.send-callback').on('click', function () {
-        console.dir($("#callback-form-id").serialize());
+        //console.dir($("#callback-form-id").serialize());
         $.ajax({
             type: 'POST',
-            url: '?r=site/ins_callback',
-            dataType: 'json',
+            url: 'ins-callback',
             data: $("#callback-form-id").serialize(),
             success:function(json) {
                 alert(json);
@@ -39,6 +38,23 @@ $(document).ready(function(){
             }
         })
     });
+
+    $('.sign-describe').on('click', function () {
+        //console.dir($("#callback-form-id").serialize());
+        $.ajax({
+            type: 'POST',
+            url: 'ins-subscribers',
+            data: $("#subscribe-form-id").serialize(),
+            success:function(json) {
+                alert(json);
+            },
+            error: function (json) {
+                console.dir(json);
+            }
+        })
+    });
+
+
 
 
 });
