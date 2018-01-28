@@ -6,24 +6,41 @@ use yii\helpers\Html;
 $model = $this->params['form_callback'];
 
 Modal::begin([
-    'header' => "<h2>Заказать обратный звонок</h2>",
+    'header' => "<h2>Замовити зворотній дзвінок</h2>",
     'closeButton' => ['label' => 'X'],
     'toggleButton' => [
         'tag' => 'button',
         'class' => 'btn callback',
-        'label' =>'Заказать звонок',
+        'label' =>'Замовити дзвінок',
     ],
 
 ]);
 ?>
 
-<?php $form = ActiveForm::begin(['id'=> 'callback-form-id']); ?>
+<?php $form = ActiveForm::begin(
+        [
+            'id'=> 'callback-form-id',
+            'enableClientValidation' => false,
+        ]
+); ?>
 
-<?= $form->field($model,'name')->label('')->textInput(['autofocus'=> true,'placeholder' => 'Имя']); ?>
-<?= $form->field($model,'phone')->label('')->textInput(['class' => 'phone-input', 'placeholder' => 'Телефон']); ?>
+<?= $form->field($model,'name')->label('')->textInput(['autofocus'=> true,'placeholder' => 'Введіть Ваш ім\'я']); ?>
+<?= $form->field($model,'phone')->label('')->widget(\yii\widgets\MaskedInput::className(),
+    [
+        'mask' => '+380(99)999-99-99',
+        'options' => [
+                'class' => 'phone-input',
+                'placeholder' => 'Введіть Ваш телефон',
+            ],
+    ]); ?>
 
-<div class="form-group">
-    <?= Html::button('Отправить', ['class' => 'btn btn-primary send-callback']); ?>
+<div class="info">
+    <p>
+        <strong>Наші менеджери зв'яжуться з Вами найближчим часом.</strong>
+    </p>
+</div>
+<div class="form-group text-center">
+    <?= Html::button('Відправити', ['class' => 'btn btn-primary send-callback']); ?>
 
 </div>
 <?php ActiveForm::end(); ?>

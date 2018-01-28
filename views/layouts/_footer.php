@@ -26,15 +26,18 @@ $model = $this->params['form_subs'];
             </div>
         </div>
         <div class="col-md-6 form-subscribers">
-            <p>Подпишитесь на рассылку новых прайсов</p>
-            <?php $form = ActiveForm::begin(['id'=> 'subscribe-form-id']); ?>
+            <p>Підпишіться на розсилку нових прайсів</p>
+            <?php $form = ActiveForm::begin(
+                    [
+                        'id' => 'subscribe-form-id',
+                        'class' => 'form-inline',
+                        'enableClientValidation' => false,
+                    ]
+            ); ?>
+            <?= $form->field($model,'email')->label('')->textInput(['placeholder' => 'Введіть Ваш Email']); ?>
 
-            <?= $form->field($model,'email')->label('')->textInput(['autofocus'=> true,'placeholder' => 'Ваш Email']); ?>
+            <?= Html::button('Підписатися', ['class' => 'btn btn-primary sign-describe']); ?>
 
-            <div class="form-group">
-                <?= Html::button('Подписаться', ['class' => 'btn btn-primary sign-describe']); ?>
-
-            </div>
             <?php ActiveForm::end(); ?>
         </div>
 

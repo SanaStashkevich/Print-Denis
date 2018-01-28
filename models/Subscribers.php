@@ -28,7 +28,7 @@ class Subscribers extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['email'], 'required'],
+            [['email'], 'required', 'message' => 'Введіть Ваш Email'],
             [['status'], 'integer'],
             [['email'], 'string', 'max' => 160],
             [['hash'], 'string', 'max' => 250],

@@ -105,7 +105,6 @@ class SiteController extends Controller
                      ]);
 
              } else {
-    //             $model->errors;
                  return json_encode([
                      'status' => $model->errors,
                  ]);

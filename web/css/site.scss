@@ -14,8 +14,6 @@ header {
 
     .callback{
       position: absolute;
-      right: 40px;
-      top: 75px;
       z-index: 9999;
       height: 50px;
       width: 200px;
@@ -85,19 +83,43 @@ header {
   .navbar-toggle {
     float: right;
   }
-  // modal form start
+
+// modal form start
+  #callback-form-id{
+    border-radius: 20px;
+  }
   .modal-dialog {
     top: 40%;
-    .modal-header{
-      .close {
-        float: right;
-        right: 20px;
-        position: absolute;
+    .modal-content {
+      border-radius: 7px;
+      .modal-header {
+        background-color: #9d9d9d;
+        .close {
+          float: right;
+          right: 20px;
+          position: absolute;
 
-
+        }
+        h2 {
+          float: left;
+        }
       }
-      h2 {
-        float: left;
+    }
+    .modal-body{
+      input{
+        width: 100%;
+        min-height: 30px;
+        font-size: 14px;
+        &#callbacks-name {
+          border-radius: 5px;
+          border: 1px solid #9d9d9d;
+        }
+      }
+      button{
+        width: 125px;
+        height: 35px;
+        font-size: 14px;
+        font-weight: 600;
       }
     }
   }
@@ -142,6 +164,29 @@ header {
       right: 20px !important;
       top: 30px !important;
     }
+  }
+}
+
+@media all and (min-width: 768px){
+  header{
+    .callback{
+      right: 40px;
+      top: 75px;
+    }
+  }
+}
+@media all and (max-width: 767px){
+  header{
+    .callback {
+      width: 100% !important;
+      bottom: 0;
+      position: fixed !important;
+    }
+  }
+  #toTop{
+    right: 5px !important;
+    bottom: 55px !important;
+    opacity: 0.3;
   }
 }
 
@@ -402,6 +447,9 @@ footer {
     }
 
     .form-subscribers {
+      .form-group{
+        display: inline-block;
+      }
       width: 100%;
       padding-left: 30px;
       padding-top: 25px;
@@ -422,8 +470,9 @@ footer {
           border-radius: 5px;
           border: 1px solid #fff;
           background-color: #2aabd2;
-        }
+          width: 100px;
 
+        }
     }
   }
 }
@@ -448,6 +497,11 @@ footer {
         }
       }
     }
+  }
+}
+@media all and (max-width: 768px) {
+  .form-subscribers{
+    margin-bottom: 60px;
   }
 
 }
