@@ -35,7 +35,7 @@ use yii\helpers\Html;
                 ['label' => 'Оплата і доставка', 'url' => ['#delivery']],
                 ['label' => 'Контакти', 'url' => ['#contacts']],
                 ],
-            'options' => ['class' => 'nav'],
+            'options' => ['class' => 'nav navbar-collapse'],
         ]);
         NavBar::end();
         ?>

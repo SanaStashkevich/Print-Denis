@@ -48,7 +48,7 @@
         <div class="container wrapper-map">
             <hr>
             <div class="row">
-                <div class="col-sm-8 col-sm-offset-2">
+                <div class="col-md-8 col-md-offset-2">
                     <h2 class="title"><strong>наше місце розташування</strong></h2>
                     <div id="map"></div>
                     <script>
