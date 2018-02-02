@@ -39,7 +39,9 @@ use yii\helpers\Html;
         ]);
         NavBar::end();
         ?>
+
         <? include_once "_modal_form.php" ?>
+
     </div>
 
 </header>

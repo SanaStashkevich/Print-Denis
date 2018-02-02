@@ -9,10 +9,8 @@ body {
 }
 // header start
 header {
-  .nav-container{
-    position: relative;
-
-    .callback{
+  div {
+    .callback {
       position: absolute;
       z-index: 9999;
       height: 50px;
@@ -23,6 +21,55 @@ header {
       background-color: #ffab00e6;
 
     }
+  }
+  .nav-container{
+    padding: 0;
+  }
+  // modal form start
+  #callback-form-id{
+    border-radius: 20px;
+  }
+  .modal-dialog {
+    top: 240px;
+    .modal-content {
+      border-radius: 7px;
+      .modal-header {
+        background-color: #9d9d9d;
+        .close {
+          float: right;
+          right: 20px;
+          position: absolute;
+
+        }
+        h2 {
+          float: left;
+        }
+      }
+    }
+    .modal-body{
+      input{
+        width: 100%;
+        min-height: 50px;
+        font-size: 16px;
+        &#callbacks-name {
+          border: 1px solid #9d9d9d;
+        }
+      }
+      button{
+        width: 125px;
+        height: 35px;
+        font-size: 14px;
+        font-weight: 600;
+
+      }
+    }
+  }
+
+  // modal form end
+}
+  .nav-container{
+    position: relative;
+
   }
   .container {
     padding: 0;
@@ -84,67 +131,26 @@ header {
     float: right;
   }
 
-// modal form start
-  #callback-form-id{
-    border-radius: 20px;
-  }
-  .modal-dialog {
-    top: 40%;
-    .modal-content {
-      border-radius: 7px;
-      .modal-header {
-        background-color: #9d9d9d;
-        .close {
-          float: right;
-          right: 20px;
-          position: absolute;
-
-        }
-        h2 {
-          float: left;
-        }
-      }
-    }
-    .modal-body{
-      input{
-        width: 100%;
-        min-height: 30px;
-        font-size: 14px;
-        &#callbacks-name {
-          border-radius: 5px;
-          border: 1px solid #9d9d9d;
-        }
-      }
-      button{
-        width: 125px;
-        height: 35px;
-        font-size: 14px;
-        font-weight: 600;
-      }
-    }
-  }
-}
 
 
-// modal form end
-@media (min-width: 768px) and (max-width: 980px){
+
+@media screen and (min-width: 768px) and (max-width: 1199px){
   header{
-    #w0-collapse {
-      margin-top: 60px;
+    .navbar-collapse {
+      margin-top: 30px !important;
     }
   }
 }
 
-
-@media (min-width: 768px) and (max-width: 980px){
+@media screen and  (max-width: 1200px){
   header{
-    #w0-collapse {
-      margin-top: 60px;
+    .navbar-collapse {
+      margin-top: 0;
     }
   }
 }
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 767px){
 
   header {
     .navbar-toggle {
@@ -155,10 +161,17 @@ header {
       margin-top: 0;
       top: 30px;
     }
+
+    .navbar-collapse{
+      margin-top: 60px;
+      box-shadow: none;
+      border: none;
+    }
   }
+
 }
 
-@media all and (min-width: 981px){
+@media all and (min-width: 1200px){
   header{
     .callback {
       right: 20px !important;
@@ -167,11 +180,11 @@ header {
   }
 }
 
-@media all and (min-width: 768px){
+@media all and (min-width: 768px) and  (max-width: 1200px){
   header{
     .callback{
       right: 40px;
-      top: 75px;
+      top: 50px;
     }
   }
 }
@@ -180,6 +193,7 @@ header {
     .callback {
       width: 100% !important;
       bottom: 0;
+      left: 0;
       position: fixed !important;
     }
   }
@@ -434,6 +448,10 @@ footer {
       font-weight: 600;
       .wrapper-contact {
         //border-right: 1px solid #fff;
+        p {
+          display: inline-block;
+          margin-bottom: 20px;
+        }
         a {
           display: ruby-text;
           margin-bottom: 10px;
